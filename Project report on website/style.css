@@ -1,0 +1,159 @@
+.intro {
+    background-color:turquoise;
+	border:black solid 2px;
+}
+.images {
+    background-color:orchid;
+	border:black solid 2px;
+}
+.content{
+    background-color:wheat;
+	border:black solid 2px;
+}
+.copyright{
+    background-color:red;
+	border:black solid 2px;
+}
+
+.exp1{
+   background-color:white;
+   border:black solid 1px;   
+}
+
+H1 {
+    text-align:center;	
+}
+
+H2 {
+    text-align:center;	
+}
+
+H3 {
+    text-align:center;
+}
+
+#error {
+    text-align:center;
+}
+
+#img1 {
+	text-align:center-left
+}
+
+#img2 {
+   text-align:center	
+}
+
+#img3 {
+   text-align:center-right	
+}
+
+h4 {
+    text-align:center;
+}
+
+#p1 {
+	text-align:center
+}
+
+#li1 {
+   color:darkblue	
+}
+
+#li2 {
+   color:darkblue	
+}
+
+#p2 {
+	text-align:center
+}
+
+img{
+    margin:20px;	
+}
+
+body {
+   background-color:lightgreen;
+}
+
+nav {
+	border:black solid 1px;
+	background-color:lightpink;
+	padding:10px;
+}
+
+nav a{
+    padding-right:7px;
+    padding-bottom:	5px;
+	background-color:white;
+	color:black;
+	margin:270px;
+	text-decoration:none;
+	border:black solid 1px;
+	
+}
+
+#piechart1 {
+  
+   border:black solid 1px;  
+   background-color:white;
+   width:200px;
+}
+
+#piechart2 {
+  
+   border:black solid 1px;  
+   background-color:white;
+   width:200px;
+}
+
+#piechart3 {
+  
+   border:black solid 1px;  
+   background-color:white;
+   width:200px;
+}
+
+#piechart4 {
+  
+   border:black solid 1px;  
+   background-color:white;
+   width:200px;
+}
+
+#piechart5 {
+  
+   border:black solid 1px;  
+   background-color:white;
+   width:200px;
+}
+
+
+span {
+  padding:10px;	
+}
+
+.aligned{
+	display: flex;
+    align-items: center;
+}
+
+#scplot1 {
+   border:black solid 1px;  
+}
+
+#scplot2 {
+   border:black solid 1px;  
+}
+
+#scplot3 {
+   border:black solid 1px;  
+}
+
+#scplot4 {
+   border:black solid 1px;  
+}
+
+#hist {
+   border:black solid 1px;  
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>Data Preparation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<nav> <a href="Introduction.html">Go Home</a> <a href="Data Exploration.html">Move to Data Exploration</a> </nav>
+</head>
+<body>
+<H1>Data Preparation</H1>
+<div class=exp1>
+<H3>Summary</H3>
+<p>During Data Preparation, I encountered errors like typos, impossible values, redundant white spaces, 
+letter-case problems and missing values. Outliers were identified too, but as the values were valid 
+and no strong evidence was there to remove them, they were kept.</p>
+<H3 id=error>Errors detected</H3>
+<p><b>1.Typos</b></p>
+<p>I used the function “value_counts()” to see the position and team names. There were plenty of 
+typos, such as names with wrong spelling(for example SGa and SF. , which is supposed to be SG and 
+SF). To remove these errors, I identified the correct name for these typos and replaced them using 
+the function “replace()”. To justify this replacement, I checked how many values each name had. For 
+example, HOU had 18 values in the data, which is a high number and therefore, it is reasonable to 
+assume H0U(the middle part of the name is zero, not O!) is the same as HOU.</p>
+<p><b>2.Impossible values</b></p>
+<p>I used if and else statements to identify any impossible value. For example, an NBA player has to be 
+minimum age of 19 years old while the possible highest age is 120 years. After executing the 
+program, I found two errors. Similarly, I found another error in the Points age column, which is a 
+player’s points exceeding 2000 points. For fixing the error in Age, I checked the values count to see 
+whether replacing the errors with the values in the data was reasonable. For example, one 
+impossible error in Age was -19, but since there was a significant number of players with 19 years, it 
+was justified to replace it. For points, there is a formula to calculate the total points(which is 
+3*number of 3P goals + 2*number of 2P goals + number of FT(Free throws)). This was used to 
+calculate the real points and these values were used to replace the impossible errors. In this column, 
+the error 20000 was replaced by 2(0*3 + 1*2 + 0*1 = 2).</p>
+<p><b>3.Redudant white spaces </b><p>
+<p> Along with typos, these errors were identified too. All redundant white spaces were removed with 
+the function “str.strip()”. For example, there were 3 errors which had “ PG”, but after the strip, it 
+ended up as “PG” and they got added to “PG”.</p>
+<p><b>4.Letter-case problem</b><p>
+<p>This too was identified along with typos and redundant white spaces. Similarly, to typos, the value of 
+each name in the column was checked to see if they can replace the errors. For example, to replace 
+the error “pg”, I checked the number of positions with “PG”. Since there was a significant number of 
+positions with PG, I replaced “pg” with “PG” using the “replace()” function.</p>
+<p><b>5.Missing Values</b><p>
+<p>Interestingly, the columns which had null values or missing values was the percentage columns. To 
+detect whether there were null values, I used an if statement inside the for loop and “isnan()” 
+function to check which value was empty. The way to fix this was checking the values of the field 
+goals and field goal attempts. For example, I checked the values of 3P and 3PA for the null values in 
+3P%. I came to know that both 3P and 3PA had zeroes. This was reflected in other field goal and field 
+goal attempts columns as well. The formula to calculate 3P% is 3P/3PA, so, 0/0= 0. Therefore, I 
+replaced all null values with zero using the function “fillna()”.</p>
+</body>
+</html>
